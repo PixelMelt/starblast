@@ -1,3 +1,17 @@
+// ==UserScript==
+// @name         A-ClientGUI
+// @namespace    https://pixelmelt.dev/
+// @version      1
+// @description  A GUI for the starblast utility mod
+// @author       Pix#7008
+// @match        https://starblast.io/*
+// @icon         https://cdn.upload.systems/uploads/SKntKQGC.png
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
 if (window.location.pathname == "/") {
   var connected = false
   if (localStorage.clientcolor == undefined) {
@@ -76,3 +90,4 @@ if (window.location.pathname == "/") {
     }
   }
 }
+})();
