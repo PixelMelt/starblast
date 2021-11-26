@@ -1,2 +1,2 @@
 # starblastio-mod
-A client mod for the game starblast.io
+Client mods for the game starblast.io
