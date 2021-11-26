@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         A-Client lite
 // @namespace    https://pixelmelt.dev/
-// @version      0.1
-// @description  Client mod for starblast.io
-// @author       You
+// @version      1
+// @description  The LITE version of A-Client
+// @author       Pix#7008
 // @match        https://starblast.io/*
 // @icon         https://cdn.upload.systems/uploads/SKntKQGC.png
 // @grant        none
+// @license      MIT
 // ==/UserScript==
 
 (function() {
@@ -14,8 +15,8 @@
     if (localStorage.clientcolor == undefined) {
       localStorage.clientcolor = `#8934C2`
     }
-    if (localStorage.clientcolor == undefined) {
-      localStorage.clientcoloralt = `#000000`
+    if (localStorage.clientcoloralt == undefined) {
+      localStorage.clientcoloralt = `#000`
     }
     if (window.location.pathname == "/") {
       console.log(`%c [!] A-ClientLITE - Welcome to the lite version of A-Client [!] \n [!] Unlike the full version of A-Client, this one contains no cheats/advantages and is purely cosmetic! [!] `, `background: #000; color: #8934C2`);
