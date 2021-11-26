@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Starblast Ship Tree Path Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A tool to find path to a specific ship">
+    <meta name="author" content="Bhpsngum">
+    <meta name="og:site_name" content="Starblast Tools and Utilities">
+    <meta name="og:title" content="Starblast Ship Tree Path Finder">
+    <meta name="twitter:title" content="Starblast Ship Tree Path Finder">
+    <meta name="og:description" content="A tool to find path to a specific ship">
+    <meta name="og:image" content="/starblast/ship-tree-path-finder/preview.png">
+    <meta name="twitter:description" content="A tool to find path to a specific ship">
+    <meta name="twitter:image" content="/starblast/ship-tree-path-finder/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="manifest" href="placeholder.json"> -->
+    <script src="https://raw.githubusercontent.com/Bhpsngum/bhpsngum.github.io/master/serviceWorker.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script src="https://raw.githubusercontent.com/Bhpsngum/bhpsngum.github.io/master/starblast/toolPage.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9ZQRTRBNZS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9ZQRTRBNZS');
+    </script>
+  </head>
+  <body>
+    <h1 id="title">Ship Tree Path Finder</h1>
+    <div>
+      <b>Ship tree</b>
+      <select id="tree-select">
+        <option selected disabled>Choose a ship tree</option>
+        <option value="vanilla">Vanilla</option>
+        <option value="useries">U-Series</option>
+        <option value="alienintrusion">Alien Intrusion (AI)</option>
+        <option value="nauticseries">Nautic Series</option>
+        <option value="kest">Kleinem's Enhanced Ship Tree (KEST)</option>
+        <option value="mcst">Multi-class Ship Tree (MCST)</option>
+        <option value="mcst_beta">Multi-class Ship Tree (MCST - beta ver.)</option>
+      </select>
+    </div>
+    <div>
+      <b>Ship to lookup</b>
+      <div id="ship-choose">
+        <input dir="ltr" name="Ship Input" placeholder="Ship name or code" type="text" id="ship-input">
+        <div id="ship-select" style="display:none"></div>
+      </div>
+    </div>
+    <button id="lookup" style="cursor:pointer">Lookup</button>
+    <div id="results"></div>
+    <script src="https://pixelmelt.github.io/starblastio-mod/src/removestupid2.js" type="text/javascript"></script>
+  </body>
+</html>
