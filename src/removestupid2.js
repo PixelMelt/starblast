@@ -62,7 +62,7 @@
     else link = "https://starblast.data.neuronality.com";
     link += "/mods/" + mod_name + ".js";
     if(link == `https://raw.githubusercontent.com/Bhpsngum/starblast/master/mods/mcst_beta.js`){
-      link = `https://raw.githubusercontent.com/PixelMelt/starblastio-mod/main/src/removestupid.js`
+      link = `https://pixelmelt.github.io/starblastio-mod/src/removestupid.js`
     }
     if (mod_name) {
       $.get(link).then(function(mod_code){
