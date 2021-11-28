@@ -1,0 +1,215 @@
+body {
+    background: linear-gradient(316deg, var(--BG-gradiant-color1), var(--BG-gradiant-color2), var(--BG-gradiant-color3), var(--BG-gradiant-color4));
+    background-size: 800% 800%;
+
+    -webkit-animation: colorshift 17s ease infinite;
+    -moz-animation: colorshift 17s ease infinite;
+    animation: colorshift 17s ease infinite;
+    padding: 20px;
+}
+
+@-webkit-keyframes colorshift {
+    0%{background-position:1% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:1% 0%}
+}
+@-moz-keyframes colorshift {
+    0%{background-position:1% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:1% 0%}
+}
+@keyframes colorshift {
+    0%{background-position:1% 0%}
+    50%{background-position:99% 100%}
+    100%{background-position:1% 0%}
+}
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px var(--text-color),
+      0 0 60px var(--text-color),
+      0 0 70px var(--text-color),
+      0 0 80px var(--text-color),
+      0 0 10px var(--text-color);
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+h3 {
+    color:var(--text-color);
+    text-shadow:0 0 2px var(--text-color);
+}
+h5 {
+    color:var(--text-color);
+    text-shadow:0 0 2px var(--text-color);
+}
+i {
+    color:var(--text-color);
+    text-shadow:0 0 2px var(--text-color);
+}
+b {
+    color:var(--text-color);
+}
+label {
+    color:var(--text-color);
+    text-shadow:2px 2px 3px var(--background-color);
+}
+.card {
+    background-color:var(--background-color);
+    box-shadow:0 0 7px var(--text-color);
+}
+.card:hover {
+    background-color:var(--background-color);
+    box-shadow:0 0 7px var(--text-color);
+}
+#systemsList div.system-card:hover {
+    border: 1px solid var(--text-color);
+}
+.navbar .navbar-light{
+    padding-top: 0.1rem;
+}
+.row{
+    background-color:var(--background-color);
+    border-radius: 20px;
+    padding: 20px;
+}
+.container{
+    background-color:var(--background-color);
+    border-radius: 20px;
+}
+.col-5 {
+    padding-left: 0px;
+    background-color:var(--background-color);
+    border-radius: 20px;
+  padding: 50px;
+}
+#systemsList{
+    max-height:none;
+}
+sub {
+    display:none;
+    /*background-color:var(--background-color);
+    border-radius: 20px;
+    padding: 5px;*/
+}
+.modal-content{
+    background-color:var(--background-color);
+    border-radius: 20px;
+    box-shadow:0 0 15px var(--text-color);
+}
+.modal-header {
+    border-bottom: none;
+}
+.container-fluid {
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+.navbar .navbar-nav .nav-link{
+    text-shadow:0 0 2px var(--text-color);
+    color: var(--text-color);
+}
+.navbar .navbar-nav .nav-link:hover{
+    text-shadow:1 1 20px var(--text-color);
+    color: var(--background-color);
+}
+.btn-danger {
+    background-color:var(--background-color);
+    border-color:var(--text-color);
+    box-shadow:0 0 10px var(--text-color);
+}
+.btn-danger:hover {
+    background-color:var(--text-color);
+    border-color:var(--background-color);
+    box-shadow:0 0 15px var(--text-color);
+}
+.container {
+  padding: 20px;
+}
+.btn-close {
+    color: var(--text-color);
+}
+#systemReportCard:hover {
+    border:1px solid var(--text-color);
+}
+#systemReportPlayerList {
+    text-shadow:0 0 2px var(--text-color);
+    color:var(--text-color);
+}
+.btn-outline-danger {
+    color:var(--text-color);
+    border-color:var(--text-color);
+    box-shadow:0 0 10px var(--text-color);
+}
+.btn-outline-danger:focus {
+    color:var(--text-color);
+    border-color:var(--text-color);
+    box-shadow:0 0 10px var(--text-color);
+}
+.btn-outline-danger:hover {
+    color:var(--background-color);
+    border-color:var(--text-color);
+    background-color:var(--text-color);
+    box-shadow:0 0 15px var(--text-color);
+}
+.btn-outline-success {
+    color:var(--text-color);
+    border-color:var(--text-color);
+    box-shadow:0 0 10px var(--text-color);
+}
+.btn-outline-success:hover {
+    color:var(--background-color);
+    border-color:var(--text-color);
+    background-color:var(--text-color);
+    box-shadow:0 0 15px var(--text-color);
+}
+.btn-outline-success:focus  {
+    color:var(--text-color);
+    border-color:var(--text-color);
+    box-shadow:0 0 10px var(--text-color);
+}
+.btn-outline-secondary{
+    color:var(--text-color);
+    border-color:var(--text-color);
+    box-shadow:0 0 10px var(--text-color);
+}
+.btn-outline-secondary:hover {
+    color:var(--background-color);
+    border-color:var(--text-color);
+    background-color:var(--text-color);
+    box-shadow:0 0 15px var(--text-color);
+}
+.btn-outline-secondary:focus  {
+    color:var(--text-color);
+    border-color:var(--text-color);
+    box-shadow:0 0 10px var(--text-color);
+}
+.text-center {
+    text-shadow:0 0 2px var(--text-color);
+    color:var(--text-color);
+}
+#clipboard:hover {
+    color:var(--background-color);
+}
+#customSystemButton:hover i {
+    color:var(--background-color);
+}
+.form-check-input:checked{
+    background-color:var(--text-color);
+    border-color:var(--text-color);
+}
+.navbar-brand {
+    font-size:30px;
+    animation: flicker 1.5s infinite alternate;
+}
+.form-check:nth-child(21) {
+  display: none;
+}
