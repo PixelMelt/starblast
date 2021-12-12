@@ -15592,112 +15592,171 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
             }
             return t.restore()
         }, t.prototype.drawIcon = function(t, e, i) {
-            var s, l, n, a, o, r, h, u, d, O, c;
-            switch (this.icon) {
-                case "gamepedia":
-                    this.icon = "https://starblast.io/ecp/gamepedia.png";
-                    break;
-                case "discord":
-                    this.icon = "https://starblast.io/ecp/discord.png";
-                    break;
-                case "twitch":
-                    this.icon = "https://starblast.io/ecp/twitch.png";
-                    break;
-                case "medic":
-                    this.icon = "https://starblast.io/ecp/medic.jpg";
-                    break;
-                case "halo":
-                    this.icon = "https://starblast.io/ecp/halo.png";
-                    break;
-                case "nwac":
-                    this.icon = "https://starblast.io/ecp/nwac.png";
-                    break;
-                case "unge":
-                    this.icon = "https://starblast.io/ecp/unge.png";
-                    break;
-                case "csf":
-                    this.icon = "https://starblast.io/ecp/csf.png";
-                    break;
-                case "pmf":
-                    this.icon = "https://starblast.io/ecp/pmf.png";
-                    break;
-                case "halloween":
-                    this.icon = "https://starblast.io/ecp/halloween.png"
+            var s, l, n, a, o, r, h, u, I, d, c;
+      switch (this.icon) {
+        //custom ECPs
+        case "Cat":
+          this.icon = "https://cdn.upload.systems/uploads/TLvzNH2J.png";
+          break;
+        case "AsteroidPumpkin":
+          this.icon = "https://cdn.upload.systems/uploads/fisSSH72.png";
+          break;
+        case "Cuda":
+          this.icon = "https://cdn.upload.systems/uploads/TTkaiRBl.png";
+          break;
+        case "Dreadnought":
+          this.icon = "https://cdn.upload.systems/uploads/jtDKrvPD.png";
+          break;
+        case "FaceInDark":
+          this.icon = "https://cdn.upload.systems/uploads/EyKq9oCc.png";
+          break;
+        case "Fly":
+          this.icon = "https://cdn.upload.systems/uploads/yN2g59qo.png";
+          break;
+        case "Ghost":
+          this.icon = "https://cdn.upload.systems/uploads/rwvdCWHS.png";
+          break;
+        case "JackOLantern":
+          this.icon = "https://cdn.upload.systems/uploads/xznFTath.png";
+          break;
+        case "Lunantium":
+          this.icon = "https://cdn.upload.systems/uploads/r5oAfpUu.png";
+          break;
+        case "Phantom":
+          this.icon = "https://cdn.upload.systems/uploads/iohZP58l.png";
+          break;
+        case "Planet":
+          this.icon = "https://cdn.upload.systems/uploads/HosMPglk.png";
+          break;
+        case "PulseFighter":
+          this.icon = "https://cdn.upload.systems/uploads/QCdVRy19.png";
+          break;
+        case "Pumpkin":
+          this.icon = "https://cdn.upload.systems/uploads/LdcsXLyb.png";
+          break;
+        case "RedMist":
+          this.icon = "https://cdn.upload.systems/uploads/FKys7LmR.png";
+          break;
+        case "Spider":
+          this.icon = "https://cdn.upload.systems/uploads/Hidg3xSX.png";
+          break;
+        case "TorpWitch":
+          this.icon = "https://cdn.upload.systems/uploads/2kPK8Av8.png";
+          break;
+        case "USniper":
+          this.icon = "https://cdn.upload.systems/uploads/SFOR4gTp.png";
+          break;
+        case "Web":
+          this.icon = "https://cdn.upload.systems/uploads/jDihrokd.png";
+          break;
+        case "Alien":
+          this.icon = "https://cdn.upload.systems/uploads/Bn9Nr8nO.png";
+          break;
+          //normal ECPs
+        case "gamepedia":
+          this.icon = "https://starblast.io/ecp/gamepedia.png";
+          break;
+        case "discord":
+          this.icon = "https://starblast.io/ecp/discord.png";
+          break;
+        case "twitch":
+          this.icon = "https://starblast.io/ecp/twitch.png";
+          break;
+        case "medic":
+          this.icon = "https://starblast.io/ecp/medic.jpg";
+          break;
+        case "halo":
+          this.icon = "https://starblast.io/ecp/halo.png";
+          break;
+        case "nwac":
+          this.icon = "https://starblast.io/ecp/nwac.png";
+          break;
+        case "unge":
+          this.icon = "https://starblast.io/ecp/unge.png";
+          break;
+        case "csf":
+          this.icon = "https://starblast.io/ecp/csf.png";
+          break;
+        case "pmf":
+          this.icon = "https://starblast.io/ecp/pmf.png";
+          break;
+        case "halloween":
+          this.icon = "https://starblast.io/ecp/halloween.png"
+      }
+      if (I = Math.round(i / 2.2), null != this.icon && this.icon.startsWith("http")) {
+        if (this.icon = this.icon.replace("http:", "https:"), null == this.icon_src && (this.icon_src = new Image, this.icon_src.crossOrigin = "Anonymous", this.icon_src.src = this.icon, this.icon_src.onload = function(t) {
+            return function() {
+              return t.IOllO(), t.updateImage()
             }
-            if (d = Math.round(i / 2.2), null != this.icon && this.icon.startsWith("http")) {
-                if (this.icon = this.icon.replace("http:", "https:"), null == this.icon_src && (this.icon_src = new Image, this.icon_src.crossOrigin = "Anonymous", this.icon_src.src = this.icon, this.icon_src.onload = function(t) {
-                        return function() {
-                            return t.IOllO(), t.updateImage()
-                        }
-                    }(this)), this.icon_src.complete) try {
-                    s = document.createElement("canvas"), s.width = i, s.height = i, l = s.getContext("2d"), l.fillStyle = "#FFF", l.beginPath(), l.arc(i / 2, i / 2, .45 * i, 0, 2 * Math.PI, !0), l.fill(), l.globalCompositeOperation = "source-in", l.drawImage(this.icon_src, .05 * i, .05 * i, .9 * i, .9 * i), t.drawImage(s, e / 2 - .5 * i, i / 2 - .5 * i, i, i)
-                } catch (t) {
-                    t
-                }
-            } else {
-                switch (t.font = d + "pt SBGlyphs", t.textBaseline = "middle", t.textAlign = "center", this.icon) {
-                    case "reddit":
-                        t.fillStyle = "#246";
-                        break;
-                    case "star":
-                        t.fillStyle = "hsl(200,50%,20%)";
-                        break;
-                    case "youtube":
-                        t.fillStyle = "#B11";
-                        break;
-                    case "paw":
-                        t.fillStyle = "#DA5";
-                        break;
-                    case "pirate":
-                    case "invader":
-                    case "empire":
-                    case "alliance":
-                    case "sdf":
-                    case "medic":
-                        t.fillStyle = "#111";
-                        break;
-                    default:
-                        t.fillStyle = "hsl(200,50%,20%)"
-                }
-                switch (t.beginPath(), t.arc(e / 2, i / 2, .45 * i, 0, 2 * Math.PI, !0), t.fill(), this.icon) {
-                    case "reddit":
-                        t.fillStyle = "#FFF", t.fillText("~", e / 2, i / 2);
-                        break;
-                    case "youtube":
-                        t.fillStyle = "#FFF", t.fillText("Z", e / 2, i / 2);
-                        break;
-                    case "pirate":
-                        t.font = d + "pt SBGlyphs", t.fillStyle = "#FFF", t.fillText("[", e / 2, i / 2);
-                        break;
-                    case "sdf":
-                        t.font = d + "pt SBGlyphs", t.fillStyle = "#FFF", t.fillText("Y", e / 2, i / 2);
-                        break;
-                    case "paw":
-                        t.fillStyle = "#000", t.fillText("V", e / 2, i / 2);
-                        break;
-                    case "alliance":
-                        t.fillStyle = "#F00", t.fillText("X", e / 2, i / 2);
-                        break;
-                    case "empire":
-                        t.fillStyle = "#FFF", t.fillText("R", e / 2, i / 2);
-                        break;
-                    case "invader":
-                        for (u = [
-                                [0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0],
-                                [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0],
-                                [0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0],
-                                [0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0],
-                                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-                                [1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1],
-                                [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1],
-                                [0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0]
-                            ], t.fillStyle = "hsl(120,100%,50%)", n = .7 * i / 11, a = r = 0; r <= 10; a = r += 1)
-                            for (o = h = 0; h <= 7; o = h += 1) O = e / 2 + n * (a - 5), c = i / 2 + n * (o - 4), 1 === u[o][a] && t.fillRect(O - .4 * n, c - .4 * n, .8 * n, .8 * n);
-                        break;
-                    default:
-                        t.fillStyle = "hsl(50,100%,70%)", t.fillText("S", e / 2, i / 2)
-                }
-            }
+          }(this)), this.icon_src.complete) try {
+          s = document.createElement("canvas"), s.width = i, s.height = i, l = s.getContext("2d"), l.fillStyle = "#FFF", l.beginPath(), l.arc(i / 2, i / 2, .45 * i, 0, 2 * Math.PI, !0), l.fill(), l.globalCompositeOperation = "source-in", l.drawImage(this.icon_src, .05 * i, .05 * i, .9 * i, .9 * i), t.drawImage(s, e / 2 - .5 * i, i / 2 - .5 * i, i, i)
+        } catch (t) {
+          t
+        }
+      } else {
+        switch (t.font = I + "pt SBGlyphs", t.textBaseline = "middle", t.textAlign = "center", this.icon) {
+          case "reddit":
+            t.fillStyle = "#246";
+            break;
+          case "star":
+            t.fillStyle = "hsl(200,50%,20%)";
+            break;
+          case "youtube":
+            t.fillStyle = "#B11";
+            break;
+          case "paw":
+            t.fillStyle = "#DA5";
+            break;
+          case "pirate":
+          case "invader":
+          case "empire":
+          case "alliance":
+          case "sdf":
+          case "medic":
+            t.fillStyle = "#111";
+            break;
+          default:
+            t.fillStyle = "hsl(200,50%,20%)"
+        }
+        switch (t.beginPath(), t.arc(e / 2, i / 2, .45 * i, 0, 2 * Math.PI, !0), t.fill(), this.icon) {
+          case "reddit":
+            t.fillStyle = "#FFF", t.fillText("~", e / 2, i / 2);
+            break;
+          case "youtube":
+            t.fillStyle = "#FFF", t.fillText("Z", e / 2, i / 2);
+            break;
+          case "pirate":
+            t.font = I + "pt SBGlyphs", t.fillStyle = "#FFF", t.fillText("[", e / 2, i / 2);
+            break;
+          case "sdf":
+            t.font = I + "pt SBGlyphs", t.fillStyle = "#FFF", t.fillText("Y", e / 2, i / 2);
+            break;
+          case "paw":
+            t.fillStyle = "#000", t.fillText("V", e / 2, i / 2);
+            break;
+          case "alliance":
+            t.fillStyle = "#F00", t.fillText("X", e / 2, i / 2);
+            break;
+          case "empire":
+            t.fillStyle = "#FFF", t.fillText("R", e / 2, i / 2);
+            break;
+          case "invader":
+            for (u = [
+                [0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0],
+                [0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0],
+                [0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0],
+                [0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0],
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+                [1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1],
+                [1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1],
+                [0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0]
+              ], t.fillStyle = "hsl(120,100%,50%)", n = .7 * i / 11, a = r = 0; r <= 10; a = r += 1)
+              for (o = h = 0; h <= 7; o = h += 1) d = e / 2 + n * (a - 5), c = i / 2 + n * (o - 4), 1 === u[o][a] && t.fillRect(d - .4 * n, c - .4 * n, .8 * n, .8 * n);
+            break;
+          default:
+            t.fillStyle = "hsl(50,100%,70%)", t.fillText("S", e / 2, i / 2)
+        }
+      }
         }, t.prototype.drawStar = function(t, e, i, s, l) {
             var n, a, o, r;
             for (t.beginPath(), n = -Math.PI / 2, o = 0; o <= 4; o += 1) a = Math.cos(n), r = Math.sin(n), t.lineTo(e + a * l, i + r * l), n += Math.PI / 5, a = Math.cos(n), r = Math.sin(n), t.lineTo(e + a * s, i + r * s), n += Math.PI / 5;
@@ -31024,5 +31083,6 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
         return translations.exists(t, e)
     }, module.exports = translations;
 })();</script>
+<script type="text/javascript">alert(`hi`)</script>
 </body>
 </html>
