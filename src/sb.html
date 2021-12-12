@@ -10621,7 +10621,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
             this.id = t, this.name = e, this.custom_game_name = this.name, this.custom_color = !0, this.radar_shows_leader = !0, this.max_enter_time = 2700, this.max_enter_players = 30, this.options = {
                 friction_ratio: 1,
                 speed_mod: 1
-            }, this.rotate_mines = !1, this.radar_zoom = 2, this.soundtrack = "procedurality.mp3", this.respawn_delay = 5e3, this.OIIIl = !0, this.anonymous_ships = !1, this.spectate = !1, this.spectate_ship = 1, this.custom_game_allowed = !0, this.show_weaponsbar = !0, this.restricted_weapons_store = !1, this.show_highscore = !0, this.infinite_base_lives = !0, this.OI10O = !0, this.sharing_enabled = !0, this.Oll00 = Oll00, this.O0ll0 = O0ll0
+            }, this.rotate_mines = !1, this.radar_zoom = 2, this.soundtrack = "procedurality.mp3", this.respawn_delay = 0, this.OIIIl = !0, this.anonymous_ships = !1, this.spectate = !1, this.spectate_ship = 1, this.custom_game_allowed = !0, this.show_weaponsbar = !0, this.restricted_weapons_store = !1, this.show_highscore = !0, this.infinite_base_lives = !0, this.OI10O = !0, this.sharing_enabled = !0, this.Oll00 = Oll00, this.O0ll0 = O0ll0
         }
         return e.prototype.entered = function(e) {
             if (this.options.strafe > 0) return setTimeout(function(e) {
@@ -11382,7 +11382,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
         return i.prototype = e.prototype, t.prototype = new i, t.O0OO1 = e.prototype, t
     }, hasProp = {}.hasOwnProperty, this.DeathMatchMode = function(e) {
         function i(e, s, l) {
-            this.lO1Ol = e, null == s && (s = "deathmatch"), null == l && (l = "Deathmatch"), i.O0OO1.constructor.call(this, s, l), this.vocabulary = [], this.radar_zoom = 1, this.max_enter_time = 3600, this.max_enter_players = 10, this.soundtrack = "argon.mp3", this.respawn_delay = 1e3, this.OIIIl = !1, this.pro = !1, this.anonymous_ships = !0, this.radar_shows_leader = !1, this.show_weaponsbar = !1, this.tips_test = "Kill any ship for %d point", this.tips = [t("Kill any ship for %d point").replace("%d", 1), t("Kill your target for %d points").replace("%d", 2), t("Score %d points to win the round").replace("%d", 12)]
+            this.lO1Ol = e, null == s && (s = "deathmatch"), null == l && (l = "Deathmatch"), i.O0OO1.constructor.call(this, s, l), this.vocabulary = [], this.radar_zoom = 1, this.max_enter_time = 3600, this.max_enter_players = 10, this.soundtrack = "argon.mp3", this.respawn_delay = 0, this.OIIIl = !1, this.pro = !1, this.anonymous_ships = !0, this.radar_shows_leader = !1, this.show_weaponsbar = !1, this.tips_test = "Kill any ship for %d point", this.tips = [t("Kill any ship for %d point").replace("%d", 1), t("Kill your target for %d points").replace("%d", 2), t("Score %d points to win the round").replace("%d", 12)]
         }
         return extend(i, e), i.prototype.IIlIO = function(t) {
             return this.game_info = t, this.lO1Ol.startGame(t), this.lO1Ol.display.screen.l0O1O.hide(), this.lO1Ol.O0Ol1.OI1Il.OllII.x = 0, this.lO1Ol.O0Ol1.OI1Il.OllII.y = -40, this.next_round_page = new NextRoundPage(this.lO1Ol, this), this.next_round_page.visible = !1, this.lO1Ol.display.screen.l0O1O.add(this.next_round_page, [0, 0, 1, 1]), this.lO1Ol.O01lI.enter()
@@ -11877,7 +11877,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
         return i.prototype = e.prototype, t.prototype = new i, t.O0OO1 = e.prototype, t
     }, hasProp = {}.hasOwnProperty, this.BattleRoyaleMode = function(e) {
         function i(e, s, l) {
-            this.lO1Ol = e, null == s && (s = "battleroyale"), null == l && (l = "Battle Royale"), i.O0OO1.constructor.call(this, s, l), this.vocabulary = [], this.radar_zoom = 2, this.high_def_radar = !0, this.max_enter_time = 120, this.max_enter_players = 30, this.soundtrack = "crystals.mp3", this.respawn_delay = 1e3, this.OIIIl = !1, this.anonymous_ships = !1, this.radar_shows_leader = !1, this.show_weaponsbar = !0, this.restricted_weapons_store = !0, this.Oll00 = BATTLE_SHIPS, this.O0ll0 = BATTLE_SHIP_TYPES, this.Oll00.add(Oll00.ships_by_code[101]), this.O0ll0.add(O0ll0.types_by_code[101]), this.RADIATION_TIME = 36e3, this.RADIATION_SIZE = 1.3, this.RADIATION_STRENGTH = .003, this.RADIATION_START = 7200, this.custom_game_allowed = !0, this.OI10O = !1, this.tips_test = "Collect weapons and refills", this.tips = [t("Collect weapons and refills"), t("Kill other players"), t("Be the last player standing")], this.spawned = !1
+            this.lO1Ol = e, null == s && (s = "battleroyale"), null == l && (l = "Battle Royale"), i.O0OO1.constructor.call(this, s, l), this.vocabulary = [], this.radar_zoom = 2, this.high_def_radar = !0, this.max_enter_time = 120, this.max_enter_players = 30, this.soundtrack = "crystals.mp3", this.respawn_delay = 0, this.OIIIl = !1, this.anonymous_ships = !1, this.radar_shows_leader = !1, this.show_weaponsbar = !0, this.restricted_weapons_store = !0, this.Oll00 = BATTLE_SHIPS, this.O0ll0 = BATTLE_SHIP_TYPES, this.Oll00.add(Oll00.ships_by_code[101]), this.O0ll0.add(O0ll0.types_by_code[101]), this.RADIATION_TIME = 36e3, this.RADIATION_SIZE = 1.3, this.RADIATION_STRENGTH = .003, this.RADIATION_START = 7200, this.custom_game_allowed = !0, this.OI10O = !1, this.tips_test = "Collect weapons and refills", this.tips = [t("Collect weapons and refills"), t("Kill other players"), t("Be the last player standing")], this.spawned = !1
         }
         return extend(i, e), i.prototype.IIlIO = function(t) {
             return this.game_info = t, this.lO1Ol.startGame(t), this.lO1Ol.display.screen.l0O1O.hide(), this.lO1Ol.O0Ol1.OI1Il.OllII.x = 0, this.lO1Ol.O0Ol1.OI1Il.OllII.y = -40, this.next_round_page = new BattleRoyalePage(this.lO1Ol, this), this.next_round_page.visible = !1, this.lO1Ol.display.screen.l0O1O.add(this.next_round_page, [0, 0, 1, 1]), this.lO1Ol.O01lI.enter()
@@ -12270,7 +12270,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
                     text: "Hmm",
                     icon: "K",
                     key: "Q"
-                }], this.radar_zoom = 1, this.soundtrack = "argon.mp3", this.gameover = !1, this.ship_can_upgrade = !1, this.ship_can_buy_life = !1, this.show_upgrades = !1, this.disable_ship_upgrade_collapsing = !0, this.respawn_delay = 1e3, this.sharing_enabled = !1, this.OIIIl = !1,
+                }], this.radar_zoom = 1, this.soundtrack = "argon.mp3", this.gameover = !1, this.ship_can_upgrade = !1, this.ship_can_buy_life = !1, this.show_upgrades = !1, this.disable_ship_upgrade_collapsing = !0, this.respawn_delay = 0, this.sharing_enabled = !1, this.OIIIl = !1,
                 this.tips_test = "You will learn everything about controlling your ship, upgrading, using secondary weapons, comms.", this.tips = [t("You will learn everything about controlling your ship, upgrading, using secondary weapons, comms."), t("If you skip this training, you can still start it later from the profile page.")]
         }
         return extend(i, e), i.prototype.IIlIO = function(t) {
@@ -13158,7 +13158,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
             var e, i, s;
             i = {};
             for (e in t) s = t[e], e = e.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"), "string" == typeof s && (s = s.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;")), i[e] = s;
-            return this.respawn_delay = 1, this.lO1Ol.killed(0, t.gameover, i), this.respawn_delay = 5e3
+            return this.respawn_delay = 1, this.lO1Ol.killed(0, t.gameover, i), this.respawn_delay = 0
         }, e.prototype.updateScore = function(t) {
             if (null != this.scoreboard) return this.scoreboard.updateScore(t)
         }, e.prototype.showScorePanel = function() {
@@ -15330,6 +15330,8 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
             for (i = [], t = e = 1; e <= 3; t = ++e) document.querySelector("#cdm-zone-0" + t) ? i.push(document.querySelector("#cdm-zone-0" + t).innerHTML = "") : i.push(void 0);
             return i
         }, e.prototype.refreshAds = function() {
+            return
+            console.log(`you shouldnt see this`)
             var t;
             if (!this.lO1Ol.O0OOO.OlII0()) {
                 if ("undefined" != typeof factorem && null !== factorem && "function" == typeof factorem.refreshAds) try {
