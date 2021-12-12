@@ -7433,8 +7433,8 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
                     case "diamond":
                         this.buildDiamondMaterial();
                         break;
-                    case "rainbow":
-                        this.buildFullColorMaterial();
+                    case "amethyst":
+                        this.buildAmethystMaterial();
                         break;
                     default:
                         this.buildDefaultMaterial()
@@ -7495,6 +7495,19 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
                     emissiveMap: lO1ll
                 })
             }, t.prototype.buildFullColorMaterial = function() {
+                var t;
+                return t = O11O1.hsvToRgbHex(this.hue, 1, 1), this.material = new THREE.MeshPhongMaterial({
+                    map: l00l0,
+                    bumpMap: l00l0,
+                    specularMap: l00l0,
+                    specular: 12632256,
+                    shininess: 50,
+                    bumpScale: .1,
+                    color: t,
+                    emissive: O11O1.hsvToRgbHex(this.hue, .5, 1),
+                    emissiveMap: IlOl0
+                })
+            }, t.prototype.buildAmethystMaterial = function() {
                 var t;
                 return t = O11O1.hsvToRgbHex(this.hue, 1, 1), this.material = new THREE.MeshPhongMaterial({
                     map: l00l0,
@@ -9530,6 +9543,20 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
                     emissiveMap: lO1ll
                 })
             }, t.prototype.buildFullColorMaterial = function() {
+                var t;
+                return t = O11O1.hsvToRgbHex(this.hue, 1, 1), this.material = new THREE.MeshPhongMaterial({
+                    map: l00l0,
+                    bumpMap: l00l0,
+                    specularMap: l00l0,
+                    specular: 12632256,
+                    shininess: 50,
+                    bumpScale: .1,
+                    color: t,
+                    emissive: O11O1.hsvToRgbHex(this.hue, .5, 1),
+                    emissiveMap: IlOl0
+                })
+            }
+            , t.prototype.buildAmethystMaterial = function() {
                 var t;
                 return t = O11O1.hsvToRgbHex(this.hue, 1, 1), this.material = new THREE.MeshPhongMaterial({
                     map: l00l0,
@@ -15568,7 +15595,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
                     s = t.createLinearGradient(0, 0, 0, i), s.addColorStop(0, "#68A"), s.addColorStop(.5, "#FFF"), s.addColorStop(.5, "#765"), s.addColorStop(1, "#CCC");
                     break;
                 case "titanium":
-                    s = t.createLinearGradient(0, 0, 0, i), s.addColorStop(0, "#444"), s.addColorStop(.5, "#AAA"), s.addColorStop(.5, "#444"), s.addColorStop(1, "#081DF7");
+                    s = t.createLinearGradient(0, 0, 0, i), s.addColorStop(0, "#444"), s.addColorStop(.5, "#AAA"), s.addColorStop(.5, "#444"), s.addColorStop(1, "#AAA");
                     break;
                 case "diamond":
                     s = t.createLinearGradient(0, 0, 0, i), s.addColorStop(0, "#2FCCFF"), s.addColorStop(.5, "#36B7EC"), s.addColorStop(.5, "#2FCCFF"), s.addColorStop(1, "#36B7EC");
@@ -15918,7 +15945,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
                 carbon: "Carbon",
                 diamond: "Diamond",
                 copper: "Copper",
-                rainbow: "Rainbow"
+                amethyst: "Amethyst"
             },
             laser: {
                 0: "Single",
