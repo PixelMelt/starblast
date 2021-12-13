@@ -14966,7 +14966,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
             return this.lastModal = t, e = document.querySelector(".modal"), e.style.width = "pdmrankings" === t || "moddingspace" === t || "myaccount" === t ? "1200px" : "800px", e.style.maxHeight = "100%", e.style.height = "pdmrankings" === t || "moddingspace" === t || "myaccount" === t ? "100%" : "auto", e.style.display = "block", i = (window.innerHeight - e.offsetHeight) / 2, e.style.top = i + "px"
         }, e.prototype.showInfos = function() {
             var e, i, s, l, n;
-            return s = document.querySelector(".modal"), "block" === s.style.display ? "infos" === this.lastModal ? this.closeModal() : this.closeModal(this.showInfos) : (document.querySelector(".modal .modaltitle").innerHTML = t("INFO"), l = document.querySelector(".modal .modalbody"), n = document.getElementById("gameinfos").innerHTML.replace("\n", "").replace(/\n/g, "<br>"), l.innerHTML = "<div class='infos'>" + n + "</div>", i = document.querySelector(".modal .modalbody #infologo"), e = new Image, e.src = "https://starblast.data.neuronality.com/img/starblast_io_logo.svg", i.appendChild(e), this.showModal("infos"))
+            return s = document.querySelector(".modal"), "block" === s.style.display ? "infos" === this.lastModal ? this.closeModal() : this.closeModal(this.showInfos) : (document.querySelector(".modal .modaltitle").innerHTML = t("INFO"), l = document.querySelector(".modal .modalbody"), n = document.getElementById("gameinfos").innerHTML.replace("\n", "").replace(/\n/g, "<br>"), l.innerHTML = "<div class='infos'>" + n + "</div>", i = document.querySelector(".modal .modalbody #infologo"), e = new Image, e.src = "https://cdn.upload.systems/uploads/ngqIvMj0.png", i.appendChild(e), this.showModal("infos"))
         }, e.prototype.showError = function(e) {
             var i, s, l;
             return i = document.querySelector(".modal"), "block" === i.style.display ? "error" === this.lastModal ? this.closeModal() : this.closeModal(this.showError) : (this.I1OlI = !1, this.errored = !0, document.querySelector(".modal .close-modal").remove(), document.querySelector(".modal .modaltitle").innerHTML = t("Error"), s = document.querySelector(".modal .modalbody"), s.innerHTML = "<div class='textcentered infos'><i class='fa fa-warning fa-4x'></i><p>" + e + "</p></div>", l = document.createElement("button"), l.setAttribute("class", "donate-btn"), l.addEventListener("click", function(t) {
@@ -15441,7 +15441,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
             var t;
             return t = document.querySelector("#menucountdown"), t.innerHTML = --this.timeout, this.I0Oll = setTimeout(function(t) {
                 return function() {
-                    return 0 === t.timeout ? (window.onbeforeunload = null, t.reloadGame()) : t.countdown()
+                    return 0 === t.timeout ? (/*window.onbeforeunload = null, t.reloadGame()*/) : t.countdown()
                 }
             }(this), 1e3)
         }, e.prototype.clearAds = function() {
@@ -15475,6 +15475,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
             var t, e, i, s, l, n, a, o, r, h, u, d;
             return e = document.querySelector("#canvaswrapper"), n = document.querySelector("#player"), o = document.querySelector("#respawn"), t = o.nextElementSibling, d = document.querySelector(".stats"), i = document.querySelector("#connection_lost"), r = document.querySelector("#respawn_actions"), s = document.querySelector("#continue_btn"), h = document.querySelector("#respawn_btn"), a = document.querySelector("#refresh_btn"), l = document.querySelector(".gameloader"), u = document.getElementById("serverip"), u.innerText = "(" + this.lO1Ol.O01lI.address + ")", u.style.fontSize = ".4em", this.overlay.classList.remove("hide"), this.overlay.style.display = "block", i.style.display = "block", o.style.display = "block", r.style.display = "block", r.classList.remove("hide"), n.style.display = "none", l.style.display = "none", t.style.display = "none", d.style.display = "none", s.style.display = "none", h.style.display = "none", a.style.display = "inline-block", e.style["-webkit-filter"] = "blur(3px) grayscale(100%)", e.style["-moz-filter"] = "blur(3px) grayscale(100%)", e.style.filter = "blur(3px) grayscale(100%)", this.displayOptions(), this.lIll0(), this.timeout = 60, this.countdown()
         }, e.prototype.adBlockedPage = function() {
+            return
             var t, e, i, s, l, n, a, o, r, h, u, d, O;
             return l = document.querySelector("#canvaswrapper"), o = document.querySelector("#player"), h = document.querySelector("#respawn"), i = h.nextElementSibling, O = document.querySelector(".stats"), t = document.querySelector("#adblocked_message"), u = document.querySelector("#respawn_actions"), n = document.querySelector("#continue_btn"), d = document.querySelector("#respawn_btn"), r = document.querySelector("#refresh_btn"), a = document.querySelector(".gameloader"), this.overlay.classList.remove("hide"), this.overlay.style.display = "block", t.style.display = "block", h.style.display = "block", u.style.display = "block", u.classList.remove("hide"), o.style.display = "none", a.style.display = "none", i.style.display = "none", O.style.display = "none", n.style.display = "none", d.style.display = "none", r.style.display = "none", l.style["-webkit-filter"] = "blur(3px) grayscale(100%)", l.style["-moz-filter"] = "blur(3px) grayscale(100%)", l.style.filter = "blur(3px) grayscale(100%)", this.displayOptions(), this.lIll0(), s = 10, (e = function(n) {
                 return function() {
@@ -31242,14 +31243,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
     }, module.exports = translations;
 })();</script>
 <script type="text/javascript">
-    funtion gametick(){
-        if (document.getElementById("logo").innerHTML != '<img src="https://cdn.upload.systems/uploads/ngqIvMj0.png">') {
-            document.getElementById("logo").innerHTML = '<img src="https://cdn.upload.systems/uploads/ngqIvMj0.png">'
-        }
-        console.log(`tick`)
-        setTimeout(gametick, 500)
-    }
-    gametick()
+    console.log(`rce`)
 </script>
 </body>
 </html>
