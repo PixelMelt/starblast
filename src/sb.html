@@ -104,7 +104,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
             <form id="player" class="hide">
                 <div class="inputwrapper">
                     <div class="colorwrapper"><span class="colorchosen"></span></div>
-                    <input onchange="localStorage.playername = this.value; Object.values(window.module.exports.settings).find(v => v && v.mode).mode.lO1Ol.player_name = this.value" tabindex="0" type="text" maxlength="16" data-translate-placeholder="Your commander name">
+                    <input onchange="localStorage.playername = this.value;" tabindex="0" type="text" maxlength="16" data-translate-placeholder="Your commander name">
                 </div>
                 <div id="colors" style="display:none;"></div>
                 <div class="playbtn noselect">
@@ -14453,7 +14453,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
                 this.inIframe = !0
             }
             try {
-                this.domain = document.referrer
+                this.domain = `https://starblast.io/`//document.referrer
             } catch (t) {
                 t,
                 this.domain = !1
