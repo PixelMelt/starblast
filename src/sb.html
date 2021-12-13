@@ -104,7 +104,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
             <form id="player" class="hide">
                 <div class="inputwrapper">
                     <div class="colorwrapper"><span class="colorchosen"></span></div>
-                    <input tabindex="0" type="text" maxlength="16" data-translate-placeholder="Your commander name">
+                    <input onchange="localStorage.playername = this.value" tabindex="0" type="text" maxlength="16" data-translate-placeholder="Your commander name">
                 </div>
                 <div id="colors" style="display:none;"></div>
                 <div class="playbtn noselect">
@@ -14118,7 +14118,7 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
                                 mod_id: t.lO1Ol.mode.mod_id,
                                 spectate: t.lO1Ol.mode.spectate,
                                 spectate_ship: t.lO1Ol.mode.spectate_ship,
-                                player_name: (new lO0OO).llI1I(t.lO1Ol.player_name),
+                                player_name: localStorage.playername,//(new lO0OO).llI1I(t.lO1Ol.player_name),
                                 hue: t.hue,
                                 preferred: null != t.lO1Ol.preferred && t.lO1Ol.preferred,
                                 bonus: i,
