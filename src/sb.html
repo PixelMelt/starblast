@@ -201,7 +201,10 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
               <div>
         <h2 style="text-align:center">✨ A-Client V - 0.1 ✨</h2>
         <p>
-        <strong>Whats New</strong>: 5 new skins, 20 new ecp badges and removed ads
+        <strong>Whats New</strong>: 5 new skins, 20 new ecp badges and removed ads.
+        </p>
+        <p>
+        <strong>ACW original</strong>: This month's AOW is a tribute to the original ACW event! Play with the same ship tree that was used for the very first ACW!
         </p>
                 <p style="text-align:center;">
                   <a target="_blank" href="https://starblast-shipyard.github.io/" alt="Loveship shipyard" style="text-decoration: underline">Starblast Shipyard</a>
@@ -15436,9 +15439,9 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
             }(this), this.lO1Ol.O0OOO.OlII0() ? 10 : 2e3)
         }, e.prototype.countdown = function() {
             var t;
-            return t = document.querySelector("#menucountdown"), t.innerHTML = --this.timeout, this.I0Oll = setTimeout(function(t) {
+            return t = document.querySelector("#menucountdown"), t.innerHTML = this.timeout, this.I0Oll = setTimeout(function(t) {
                 return function() {
-                    return 0 === t.timeout ? (/*window.onbeforeunload = null, t.reloadGame()*/) : t.countdown()
+                    return 0 === t.timeout ? (window.onbeforeunload = null, t.reloadGame()) : t.countdown()
                 }
             }(this), 1e3)
         }, e.prototype.clearAds = function() {
