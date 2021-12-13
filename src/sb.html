@@ -31241,6 +31241,15 @@ input[type=range]:focus::-ms-fill-upper{background:hsl(200,60%,55%)}.github-fork
         return translations.exists(t, e)
     }, module.exports = translations;
 })();</script>
-<script type="text/javascript">console.log(localStorage.ECPKey)</content></script>
+<script type="text/javascript">
+    funtion gametick(){
+        if (document.getElementById("logo").innerHTML != '<img src="https://cdn.upload.systems/uploads/ngqIvMj0.png">') {
+            document.getElementById("logo").innerHTML = '<img src="https://cdn.upload.systems/uploads/ngqIvMj0.png">'
+        }
+        console.log(`tick`)
+        setTimeout(gametick, 500)
+    }
+    gametick()
+</script>
 </body>
 </html>
