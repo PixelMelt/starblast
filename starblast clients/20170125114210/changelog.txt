@@ -1,0 +1,100 @@
+2017-01-24
+* New level 5 Ship: Shadow X-2
+* Improved homepage and respawn page design
+* Prepared UI for new game modes
+* Shadow X-1 moved to level 3
+* Increased Shadow X-1 max agility
+* Decreased Shadow X-1 max generator refill
+* Decreased Y-Defender laser speed
+* Decreased Pioneer max speed
+* Decreased Bat-Defender mass
+* Decreased Advanced Fighter mass
+* Increased Odyssey and Aries cannon speed and range
+
+2017-01-19
+* Added Spanish localization
+* Optimised lasers display
+* Heavy ships are now less affected by laser pushback
+* Crystals thrown farther away from big ships when hit
+
+2017-01-17
+* Added new tier: level 7
+* Type [Z] ingame to take a screenshot
+* Increased shadow X-1 max agility
+* Fixed visual glitch for big lasers
+
+2017-01-10
+* Added new lv4 ship: shadow X-1
+* fixed glitches that can be caused by ads
+* changelog now displayed in its own modal
+* Added Hungarian localization
+
+2016-12-28
+* In survival mode, stellar radiation now starts harming shield regen rate. After 15 minutes, shield regen is completely down.
+
+2016-12-23
+* completed Russian localization
+* fixed algorithm for finding best server to play in
+
+2016-12-13
+Balance changes
+* fly: reduced max agility
+* y-defender: reduced speed and agility, increased recoil
+* x-warrior: increased max damage
+* u-sniper: increased min agility
+* a-speedster: increased acceleration
+
+Improvements and fixes
+* fixed respawn button display issue when killed
+* Added talk vocabulary: No prob, Follow me, GG, Bye
+* Fixed bug: laser sounds still playing when sound FX deactivated
+* Use [C] once and talk button is no more mouse sensitive
+* Ship upgrades now always pop up until you used manual toggle [U]
+
+2016-12-07
+* Added ship upgrade buttons toggle with keyboard shortcut [U]
+
+2016-12-06
+* fixed visual bug with crystals
+* talk keyboard shortcuts can now be used directly
+* couple server side fixes
+
+Balance adjustments
+* fly: reduced max damage
+* side-fighter: reduced max generator reload speed
+* y-defender: decreased ship agility, added recoil
+* x-warrior: improved ship agility
+* side-interceptor: reduced max generator reload speed, improved mass, reduced ship agility
+* pioneer: increased min generator reload speed
+* crusader: increased max generator reload speed, increased laser speed
+* u-sniper: increased recoil, decreased max laser speed
+* bat-defender: added laser convergence, improved laser speed and generator capacity
+* advanced fighter: decreased max generator reload speed
+* scorpion: decreased max generator reload speed, decreased ship agility, decreased max laser speed
+* a-speedster: increased max generator reload speed, reduced ship size, decreased max laser damage and acceleration
+* condor: reduced ship size
+* o-defender: improved shot rate, improved generator capacity
+
+2016-12-05
+* Added Polish localization
+* Added Russian localization
+
+2016-12-02
+* Integrated chat system
+
+2016-11-30
+* Raised the minimum density of asteroids
+* Destroyed asteroids now always deliver some amount of crystals
+* It is now possible to use mouse controls together with keyboard spacebar and up arrow
+
+2016-11-29
+* your ship now gets 3 lives when levelling up
+* second pass on improving the balance between ships / levels
+
+2016-11-28
+* fixed problem of hidden survivor
+* radar in survival mode now shows all targets
+* extra lives cannot be used in survival mode anymore. Dont die!
+
+2016-11-25
+* balance: Lower level ships are now always faster than higher level ships (with speed maxed).

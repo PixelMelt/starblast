@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui=1">
+    <title>Starblast Modding</title>
+    <style>
+    body {
+      background: #000;
+    }
+    html,body,div {
+      margin: 0;
+      padding:0 ;
+      color: #EEE;
+      font-family: Tahoma,Arial
+    }
+    #content {
+      overflow: hidden;
+      position: absolute;
+      left: 0; right: 0; bottom: 0; top: 0px;
+    }
+
+    iframe {
+      border: none;
+    }
+
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/engine.io-client/1.7.2/engine.io.min.js"></script>
+    <script>
+    this.WSS = (function() {
+      function WSS() {}
+
+      WSS.create = function(address) {
+        var domain, port, split;
+        split = address.split(":");
+        if (true) {
+          domain = split[0].replace(/\./g, "-") + ".starblast.io";
+        } else {
+          domain = split[0];
+        }
+        port = split[1];
+        console.info("establishing secure websocket to: " + domain + ":" + port);
+        return new engine_io.Socket("wss://" + domain + ":" + port);
+      };
+
+      return WSS;
+
+    })();
+    this.ECP = (function() {
+      function ECP(game) {
+        var b, err, i, len, ref;
+        this.game = game;
+        this.key = localStorage.getItem("ECPKey");
+        this.verified = localStorage.getItem("ECPVerified");
+        if ((this.key == null) && this.verified === "yes") {
+          this.setVerified("no");
+        }
+      }
+
+      ECP.prototype.isVerified = function() {
+        return this.verified === "yes";
+      };
+
+      return ECP;
+
+    })();
+    var engine_io, sendGameMessage;
+
+    this.TokenClient = (function() {
+      function TokenClient(address, callback) {
+        this.address = address;
+        this.callback = callback;
+        this.socket = WSS.create(this.address);
+        this.socket.on("message", (function(_this) {
+          return function(msg) {
+            if (typeof msg === "string") {
+              msg = JSON.parse(msg);
+              if (msg.name) {
+                switch (msg.name) {
+                  case "token":
+                    return _this.callback(msg.data.token);
+                }
+              }
+            }
+          };
+        })(this));
+        this.socket.on("open", (function(_this) {
+          return function() {
+            return _this.socket.send(JSON.stringify({
+              name: "modding_token",
+              data: {
+                ecp_key: new ECP().key
+              }
+            }));
+          };
+        })(this));
+      }
+
+      return TokenClient;
+
+    })();
+
+    window.addEventListener("message", function(event) {
+      var data;
+      console.info(JSON.stringify(event.data));
+      if (event.data != null) {
+        data = JSON.parse(event.data);
+        switch (data.name) {
+          case "get_token":
+            return new TokenClient(data.address, (function(_this) {
+              return function(token) {
+                return sendGameMessage({
+                  name: "token",
+                  value: token
+                });
+              };
+            })(this));
+        }
+      }
+    });
+
+    sendGameMessage = function(data) {
+      return document.getElementById("moddingcontent").contentWindow.postMessage(JSON.stringify(data), "*");
+    };
+
+    engine_io = window.eio;
+
+    window.eio = {
+      Socket: function() {}
+    };
+
+    window.addEventListener("load", function() {
+      if (!new ECP().isVerified()) {
+        document.body.innerHTML = "<div style='margin:20px;'>A valid ECP is required. You will be redirected to Starblast.io</div>";
+        return setTimeout((function() {
+          return document.location.href = "https://starblast.io";
+        }), 5000);
+      }
+    });
+
+    </script>
+    <!--<script data-js-cook data-avoid-obfuscation src="js/ecp.js"></script>
+    <script data-js-cook data-avoid-obfuscation src="js/wss.js"></script>
+    <script data-js-cook data-avoid-obfuscation src="js/modding/moddingframe.js"></script>-->
+  </head>
+  <body>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-49553618-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <div id="content">
+      <iframe id="moddingcontent" src="https://starblast.data.neuronality.com/modding/moddingcontent.html" width="100%" height="100%" sandbox="allow-scripts allow-same-origin allow-forms allow-top-navigation allow-popups"/>
+      <!--<iframe id="moddingcontent" src="http://local.starblast.io/moddingcontent.html" width="100%" height="100%" sandbox="allow-scripts allow-same-origin allow-forms allow-top-navigation allow-popups"/>-->
+    </div>
+  </body>
+</html>

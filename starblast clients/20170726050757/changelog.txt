@@ -1,0 +1,376 @@
+2017-07-24
+* Pro Deathmatch points decay
+* RCS now active in all modes
+* New option to disable button clicks
+
+2017-07-17
+* Fixed scoring conditions when players abandon round in Pro Deathmatch
+
+2017-07-06
+* You can now resume a team game with the same ship after disconnecting from the game (in preparation for upcoming Battle for Alpha Centauri)
+* New language: Korean
+
+2017-06-23
+* Added language: Hebrew
+* Added High Contrast option for color blind people
+
+2017-06-21
+* Added language: Thai
+
+2017-06-16
+* Pro Deathmatch games are now played by anyone. Only ECP players will be ranked.
+
+2017-06-15
+* Pro Deathmatch Championship is live!
+
+2017-06-09
+* Making room for some new stuff
+* Removed Barracuda-only rounds
+* Deathmatch new scoring: target=2, win round at 12
+* fixed unending team mode
+* updated to THREE.js version 85
+* enhanced background textures
+* added new language Azeri
+
+2017-05-31
+* Deathmatch fixes:
+ - replace target when target disconnects
+ - weaker ships less likely to be selected as targets
+ - removed chat
+* Survival mode:
+ - endgame: after 10 minutes survival, radiation make you lose HP
+ - asteroids now give more gems (+35%)
+ - survival now kicks in after 60 minutes
+* Weekly balance update
+(thanks to the community feedback and compilation/review by Oh_ and Acarii)
+ - Fly: tiny base speed buff
+ - Side-Fighter: Shield regen and energy buff
+ - Mercury: laser damage buff
+ - Shadow X-2: Shield regen nerf, energy buff
+ - Toscain: Buffs: shield, energy, laser damage
+ - Scorpion: energy and laser rate nerfs, laser speed buff
+ - H-Mercury: reduced mass, speed/acceleration buff, laser tweaks
+ - Aries: laser rate buff
+
+2017-05-30
+* Deathmatch reloaded (anti-teaming):
+ - each player has a (randomly) assigned target
+ - kill your target to earn 3 points
+ - kill anyone to earn 1 point
+ - score 15 points to win the round
+
+2017-05-24
+* Deathmatch anonymized to prevent teaming
+* Fixed error trace when unloading crystals
+
+2017-05-23
+* New Mode: Deathmatch
+ - Rounds start with a choice of 2 maxed ships of same level
+ - RCS toggle is enabled (flight assist on/off)
+ - First player to kill 10 ships wins the round
+ - Asteroids map changes with new round
+ - Asteroids are strong and do not deliver gems
+ - Good luck Commander!
+* Fixed video ads problems
+* Bug fixes
+
+2017-05-19
+* Anti team-trolling reworked: any ship takes damage when purposely hitting team mate
+
+2017-05-18
+* Barracuda takes damage when hitting team mates
+* Team mode endmatch: ships self destroy when their station is fully destroyed
+* Custom Games: New asteroids map chooser and preview!
+
+2017-05-16
+* Fixed crystals going through the screen at speed of light
+* Fixed ghost ships flashes
+* Fixed being killed and staying in limbo forever
+* New Custom Game option: global ship speed modifier!
+* Now allowing smaller systems in Custom Games
+* Translations update
+
+2017-05-12
+* Added Twitch badge
+
+2017-05-11
+* Improved UI textures sharpness
+
+2017-05-09
+* Fixed Barracuda double-dash
+* Barracuda: damage upgrades dash speed burst ; bullet speed upgrades dash cruise speed
+* Weekly balance update, thanks to community feedback and @Oh_ input data:
+ - Shadow X-1: power and agility buff
+ - Mercury: damage buff
+ - U-Sniper: bullet speed nerf
+ - Shadow X-2: Shield and energy regen buff
+ - Advanced-Fighter: Bullet speed nerf
+ - Scorpion: Energy and bullet speed nerf
+ - Condor: Balance changes including buffs and nerfs
+ - A-Speedster: Slight overall buff
+ - Rock-Tower: max bullet speed nerf
+ - Barracuda: mass buff, energy nerf
+ - Odyssey/Aries/Shadow X-3 have been slightly buffed in speed and agility
+
+2017-05-04
+* Barracuda V2! Fully reworked with dash speed
+* Damage rules changed to avoid Barracuda trolling in team mode
+
+2017-05-02
+* improved radar readability
+* new Custom Game experimental features: RCS (Flight assist) toggle , Friction parameter
+
+2017-04-28
+* Improved team joining condition. If one team dominates, you can join either of the 2 other teams.
+
+2017-04-27
+* Added information message about players contributing gems to their team
+* Added health bar to station modules when attacked
+* Fixed problem with button "Join my custom game"
+* Fixed: Spec upgrades interfered with fire rate, allowing shooting faster
+
+2017-04-26
+* 10 seconds invulnerability on respawn (team mode)
+* auto-switch to fullscreen now strictly on mobile
+* fixed some glitches when screen FPS exceed 60
+* fixed shield / generator bar sometimes not updating
+* ECP custom game creator now accessible from main Play button
+* secret future new features put to test :)
+
+2017-04-24
+* Fixed bug: losing multiple lives when killed once
+* New rule: in team mode, ship tier 7 unlocks only when station crystal tank is full
+* New rule: Tier 7 ships come with 0 extra life in team mode
+* Displaying messages when ship upgrades are blocked by station level
+* Keyboard shortcuts are now displayed on tablets and touchscreens
+
+2017-04-22
+* Fixed asteroid strength parameter rounding in custom games
+
+2017-04-21
+* Fixed ship-station collisions and friend ships collisions
+* ECP Custom Game Creator (beta)
+
+2017-04-20
+* fixed bug with ad blockers
+* added new ECP badges
+* balance: reduced stations shield capacity a bit
+* balance: reduced station repair threshold to 25% crystal capacity
+* balance: nerfed Shadow X-3 acceleration and power regen
+* fixed radar plots in team mode
+* fixed chat bubble color
+* raised chat icons auto-close delay
+* Improved station attack alerts
+* prepared an awesome new feature for ECP users
+
+2017-04-19
+* improved server finder strategy (again)
+* added Swedish language
+* added cookie consent
+* optimized loading time
+
+2017-04-18
+Team mode improvements
+* Ship upgrades are now restricted to exact depot/spawning level
+* Slight improve to spawning
+* fixed ship not showing in scoreboard
+* raised team max capacity to 15
+* Abandoned space station self-destroys
+* neutralized mass impact on friendly Collisions
+* module repair gauge
+* raised global asteroids density (all modes)
+* unloading crystals gives score points
+* fixed Station under attack alert
+
+2017-04-16
+* Balance changes: reduced stations shield again, crystal drop rate x1.5 in team mode
+* improved server finder conditions
+
+2017-04-15
+* Balance changes: reduced stations shield and crystal tank capacity
+
+2017-04-14
+* Identified and fixed 3 server crash cases
+
+2017-04-14
+* New game mode: the team mode!
+ - You start every game by choosing a team
+ - Each team has a space station to defend
+ - Each space station in game has 3 types of modules
+   + Structure modules
+   + Spawning modules, a little tougher
+   + Crystal deposit modules, toughter
+ - Each space station can be filled with crystal
+ - An half filled station repairs randomly a destroyed module
+ - A full filled station levels up your station
+   + A bigger level station is bigger and tougher
+   + A bigger level station can take crystals from bigger ships
+   + A bigger level station can respawn bigger ships
+ - When all spawning modules are destroyed, the team ships respawn randomly on the map
+ - When all deposit modules are destroyed, the team can repair or level up the station anymore
+ - When the whole station is destroyed, the team members can't respawn anymore
+ - When the station and all team ships are destroyed, the team is game over!
+
+2017-03-31
+* New Ship! The Barracuda, level 6. Prepare for a very special fighting style.
+* Added new languages: Arabic, Danish, improved Chinese
+* Ships texturing improvements
+* Improved double-lasers
+* Improved UI, scoreboard etc.
+* A secret tremendous upcoming feature is put to test
+
+2017-03-07
+* Added Italian language
+* Reduced O-defender max shield capacity
+* Improved H-Mercury shield, mass, and fire regeneration
+* Gamepad control! (experimental): on Chrome, open chrome://flags and enable Gamepad API
+
+2017-03-01
+* New lv6 ship, H-Mercury
+* Added Dutch language
+* Completed other translations
+* Switched lv6 Condor & A-speedster place
+* Increased Aetos generator regen speed
+* Increased Shadow X-2 generator regen speed
+* Decreased Pulse-Fighter agility
+
+2017-02-17
+* New lv4 ship, Mercury
+* Added Indonesian language
+* Completed other translations
+* Decreased O-Defender agility
+* Decreased O-Defender fire speed
+* New ECP badges: Galactic Empire, Rebel Alliance, Soloist Defence Force
+
+2017-02-13
+* Added Turkish language
+* Added Czech language
+* Added Slovak language
+* Raised asteroids average density and size
+* Fixed bug: some crystals could not be collected
+* Increased T-Warrior max generator reload speed
+* Increased Aetos fire power
+
+2017-02-09
+* New delay of 5 seconds before you can respawn
+* You can now chat during the 5 seconds delay
+* Level 1 ship loses upgrades when killed
+* New particle effects on laser collisions
+* New shield visual fx
+* Big explosions shake camera
+* Added German localization
+* ECP badge customization
+* ECP ship material and lasers customization
+* ECP players start will fully upgraded level 1 ship (same benefit as sharing game through Facebook and Twitter buttons)
+* Increased X-Warrior damages on central lasers
+* Decreased X-Warrior damages on side lasers
+* Increased mass/shield of Shadow X-3
+* Decreased acceleration of Shadow X-3
+
+2017-02-01
+* New level 7 Ship: Shadow X-3
+* Decreased Shadow X-2 fire power
+* Decreased shield capacity of lv7 ships
+* Added Japanese localization
+* New Australia zone to reduce ping for Australian and New Zealander players
+
+2017-01-24
+* New level 5 Ship: Shadow X-2
+* Improved homepage and respawn page design
+* Prepared UI for new game modes
+* Shadow X-1 moved to level 3
+* Increased Shadow X-1 max agility
+* Decreased Shadow X-1 max generator refill
+* Decreased Y-Defender laser speed
+* Decreased Pioneer max speed
+* Decreased Bat-Defender mass
+* Decreased Advanced Fighter mass
+* Increased Odyssey and Aries cannon speed and range
+
+2017-01-19
+* Added Spanish localization
+* Optimised lasers display
+* Heavy ships are now less affected by laser pushback
+* Crystals thrown farther away from big ships when hit
+
+2017-01-17
+* Added new tier: level 7
+* Type [Z] ingame to take a screenshot
+* Increased shadow X-1 max agility
+* Fixed visual glitch for big lasers
+
+2017-01-10
+* Added new lv4 ship: shadow X-1
+* fixed glitches that can be caused by ads
+* changelog now displayed in its own modal
+* Added Hungarian localization
+
+2016-12-28
+* In survival mode, stellar radiation now starts harming shield regen rate. After 15 minutes, shield regen is completely down.
+
+2016-12-23
+* completed Russian localization
+* fixed algorithm for finding best server to play in
+
+2016-12-13
+Balance changes
+* fly: reduced max agility
+* y-defender: reduced speed and agility, increased recoil
+* x-warrior: increased max damage
+* u-sniper: increased min agility
+* a-speedster: increased acceleration
+
+Improvements and fixes
+* fixed respawn button display issue when killed
+* Added talk vocabulary: No prob, Follow me, GG, Bye
+* Fixed bug: laser sounds still playing when sound FX deactivated
+* Use [C] once and talk button is no more mouse sensitive
+* Ship upgrades now always pop up until you used manual toggle [U]
+
+2016-12-07
+* Added ship upgrade buttons toggle with keyboard shortcut [U]
+
+2016-12-06
+* fixed visual bug with crystals
+* talk keyboard shortcuts can now be used directly
+* couple server side fixes
+
+Balance adjustments
+* fly: reduced max damage
+* side-fighter: reduced max generator reload speed
+* y-defender: decreased ship agility, added recoil
+* x-warrior: improved ship agility
+* side-interceptor: reduced max generator reload speed, improved mass, reduced ship agility
+* pioneer: increased min generator reload speed
+* crusader: increased max generator reload speed, increased laser speed
+* u-sniper: increased recoil, decreased max laser speed
+* bat-defender: added laser convergence, improved laser speed and generator capacity
+* advanced fighter: decreased max generator reload speed
+* scorpion: decreased max generator reload speed, decreased ship agility, decreased max laser speed
+* a-speedster: increased max generator reload speed, reduced ship size, decreased max laser damage and acceleration
+* condor: reduced ship size
+* o-defender: improved shot rate, improved generator capacity
+
+2016-12-05
+* Added Polish localization
+* Added Russian localization
+
+2016-12-02
+* Integrated chat system
+
+2016-11-30
+* Raised the minimum density of asteroids
+* Destroyed asteroids now always deliver some amount of crystals
+* It is now possible to use mouse controls together with keyboard spacebar and up arrow
+
+2016-11-29
+* your ship now gets 3 lives when levelling up
+* second pass on improving the balance between ships / levels
+
+2016-11-28
+* fixed problem of hidden survivor
+* radar in survival mode now shows all targets
+* extra lives cannot be used in survival mode anymore. Dont die!
+
+2016-11-25
+* balance: Lower level ships are now always faster than higher level ships (with speed maxed).

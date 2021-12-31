@@ -1,0 +1,13 @@
+{
+  "display": "standalone",
+  "orientation": "landscape",
+  "start_url": "/mobile.html",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "icons": [
+  {
+    "src": "/static/img/icon64.png",
+    "sizes": "64x64",
+    "type": "image/png"
+  }]
+}
