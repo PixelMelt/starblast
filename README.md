@@ -8,5 +8,7 @@ All publicly avalable web clients, dating back to the games release in 2016.
 
 # Desktop Clients
 Linux(chad os) - https://starblast.data.neuronality.com/download/starblast-latest-x86_64.AppImage
+
 Mac - https://starblast.data.neuronality.com/download/Starblast.dmg
+
 Windows - https://starblast.data.neuronality.com/download/starblast_setup-latest.exe
