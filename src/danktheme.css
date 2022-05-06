@@ -232,8 +232,8 @@ body {
 }
 
 #systemsList::-webkit-scrollbar-thumb {
-    background-color: #F5246E;
+    background-color: var(--text-color);
     border-radius: 20px;
-    border: 3px solid #F5246E;
+    border: 3px solid var(--text-color);
 }
 
