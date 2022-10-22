@@ -1,6 +1,15 @@
 # Pixelmelt's starblastio repo
 Assortment of code related to the game starblast.io
 
+# Ancients Epic Modding UI (AEMU)
+place the following before your modding code.
+```
+const include = async function(url) {let response = await fetch(url);let text = await response.text();(1, eval)(text);return text;}
+if (!window.initalized) {include("https://pixelmelt.github.io/starblast/src/ancientsEpicModdingUI.js")}
+```
+when the mod is run, AMEU should initalize and the UI will be available by pressing the key combo ALT + W
+
+
 # Web Clients
 https://github.com/PixelMelt/starblast/tree/main/starblast%20clients/web%20clients
 
