@@ -12,6 +12,15 @@ function aemuKick(id,reason="Unspecified"){
     game.modding.terminal.echo(" | Player: "+game.ships[id].name+", id: "+id+" Has successfully been kicked\n");
 }
 
+function aemuSetGems(id,gems){
+    if(!window.modrunning){console.log(`mod not running, cannot set gems`);return;}
+    if(id == undefined){console.log(`no id specified, cannot set gems`);return;}
+    if(gems == undefined){console.log(`no gems specified, cannot set gems`);return;}
+    gems = parseInt(gems)
+    game.ships[id].set({crystals:gems});
+    game.modding.terminal.echo(" | Player: "+game.ships[id].name+", id: "+id+" Has successfully been given "+gems+" gems\n");
+}
+
 function createKickUI(){
     // create a pop up in the middle of the screen with 2 inputs and a button to cancel or kick
     
@@ -121,6 +130,143 @@ function createKickUI(){
     document.body.appendChild(kickUI)
 }
 
+function createSetGemsUI(){
+    // create a pop up in the middle of the screen with 2 inputs and a button to cancel or kick
+    
+    let setGemsUI = document.createElement(`div`)
+    setGemsUI.id = `setGemsUI`
+
+    setGemsUI.style.margin = `0`
+    setGemsUI.style.padding = `0`
+    setGemsUI.style.overflow = `hidden`
+    setGemsUI.style.font = `12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace`
+    setGemsUI.style.position = `absolute`
+    setGemsUI.style.top = `0`
+    setGemsUI.style.bottom = `0`
+    setGemsUI.style.left = `0`
+    setGemsUI.style.right = `0`
+    setGemsUI.style.background = `none`
+    setGemsUI.style.backgroundColor = `#2263D264`
+    setGemsUI.style.flexDirection = `column`
+    setGemsUI.style.display = `flex`
+    setGemsUI.style.alignItems = `center`
+    setGemsUI.style.justifyContent = `center`
+    setGemsUI.style.zIndex = `1000`
+
+    // dropdown menu for all the players in the game
+    let setGemsUIinputUser = document.createElement(`select`)
+    setGemsUIinputUser.id = `setGemsUIinputUser`
+    setGemsUIinputUser.style.margin = `10px`
+    setGemsUIinputUser.style.padding = `10px`
+    setGemsUIinputUser.style.display = `flex`
+    setGemsUIinputUser.style.color = `#000`
+    setGemsUIinputUser.style.backgroundColor = `#fff`
+    setGemsUIinputUser.style.borderRadius = `5px`
+
+    // add a default option that says "no players in game"
+    let setGemsUIinputUserDefault = document.createElement(`option`)
+    setGemsUIinputUserDefault.value = ``
+    setGemsUIinputUserDefault.innerHTML = `No players in game`
+    setGemsUIinputUser.appendChild(setGemsUIinputUserDefault)
+    
+    // if there are ships in the game
+    if(game.ships.length > 0){
+        // remove all children of the select element
+        while(setGemsUIinputUser.firstChild){
+            setGemsUIinputUser.removeChild(setGemsUIinputUser.firstChild)
+        }
+        // content of the dropdown menu
+        for(let i = 0; i < game.ships.length; i++){
+            let option = document.createElement(`option`)
+            option.value = i
+            option.innerHTML = game.ships[i].name + ` (id: ` + i + `)`
+            setGemsUIinputUser.appendChild(option)
+        }
+    }
+
+    // slider for the amount of gems
+
+    let setGemsUIinputGems = document.createElement(`input`)
+    setGemsUIinputGems.id = `setGemsUIinputGems`
+    setGemsUIinputGems.type = `range`
+    setGemsUIinputGems.min = `0`
+    setGemsUIinputGems.max = `980`
+    setGemsUIinputGems.value = `100`
+    setGemsUIinputGems.style.margin = `10px`
+    setGemsUIinputGems.style.padding = `10px`
+    setGemsUIinputGems.style.display = `flex`
+    setGemsUIinputGems.style.color = `#000`
+    setGemsUIinputGems.style.backgroundColor = `#fff`
+    setGemsUIinputGems.style.borderRadius = `5px`
+
+    // input for the amount of gems, this is just a text box that shows the value of the slider and can be changed manually
+    let setGemsUIinputGemsText = document.createElement(`input`)
+    setGemsUIinputGemsText.id = `setGemsUIinputGemsText`
+    setGemsUIinputGemsText.type = `text`
+    setGemsUIinputGemsText.value = `100`
+    setGemsUIinputGemsText.style.margin = `10px`
+    setGemsUIinputGemsText.style.padding = `10px`
+    setGemsUIinputGemsText.style.display = `flex`
+    setGemsUIinputGemsText.style.color = `#000`
+    setGemsUIinputGemsText.style.backgroundColor = `#fff`
+    setGemsUIinputGemsText.style.borderRadius = `5px`
+
+    // when the slider is changed, change the text box
+    setGemsUIinputGems.oninput = function(){
+        setGemsUIinputGemsText.value = setGemsUIinputGems.value
+    }
+
+    // when the text box is changed, change the slider
+    setGemsUIinputGemsText.oninput = function(){
+        setGemsUIinputGems.value = setGemsUIinputGemsText.value
+    }
+
+    // group the buttons together
+    let setGemsUIbuttons = document.createElement(`div`)
+    setGemsUIbuttons.style.display = `flex`
+    setGemsUIbuttons.style.flexDirection = `row`
+    setGemsUIbuttons.style.alignItems = `center`
+    setGemsUIbuttons.style.justifyContent = `center`
+    
+    // button to cancel
+    let setGemsUIcancel = document.createElement(`button`)
+    setGemsUIcancel.id = `setGemsUIcancel`
+    setGemsUIcancel.innerHTML = `Cancel`
+    setGemsUIcancel.style.backgroundColor = `#fff`
+    setGemsUIcancel.style.borderRadius = `5px`
+    setGemsUIcancel.style.margin = `10px`
+    setGemsUIcancel.style.padding = `10px`
+    setGemsUIcancel.onclick = function(){
+        // destroy the UI
+        document.getElementById(`setGemsUI`).remove()
+    }
+
+    // button to set gems
+    let setGemsUIsetGems = document.createElement(`button`)
+    setGemsUIsetGems.id = `setGemsUIsetGems`
+    setGemsUIsetGems.innerHTML = `Set Gems`
+    setGemsUIsetGems.style.backgroundColor = `#fff`
+    setGemsUIsetGems.style.borderRadius = `5px`
+    setGemsUIsetGems.style.margin = `10px`
+    setGemsUIsetGems.style.padding = `10px`
+    setGemsUIsetGems.onclick = function(){
+        // set the gems
+        aemuSetGems(setGemsUIinputUser.value,setGemsUIinputGems.value)
+        console.log(`Set gems of player ` + setGemsUIinputUser.value + ` to ` + setGemsUIinputGems.value)
+        // destroy the UI
+        document.getElementById(`setGemsUI`).remove()
+    }
+
+    // append all the elements to the UI
+    setGemsUIbuttons.appendChild(setGemsUIcancel)
+    setGemsUIbuttons.appendChild(setGemsUIsetGems)
+    setGemsUI.appendChild(setGemsUIinputUser)
+    setGemsUI.appendChild(setGemsUIinputGems)
+    setGemsUI.appendChild(setGemsUIinputGemsText)
+    setGemsUI.appendChild(setGemsUIbuttons)
+    document.body.appendChild(setGemsUI)
+}
+
 function editorSwitch(state){
     if(state){
         document.getElementById(`editor`).style.display = `block`
@@ -192,6 +338,8 @@ function createTopButtons(){
         button.style.width = `90%`
         button.style.display = `flex`
         button.style.color = `#000`
+        // mouseover pointer
+        button.style.cursor = `pointer`
         return button
     }
     
@@ -199,7 +347,16 @@ function createTopButtons(){
     endgame.id = `modcustombuttonendgame`
     endgame.innerHTML = `End game`
     endgame.onclick = function(){
-        game.modding.commands.stop()
+        if(endgame.innerHTML == `End game`){
+            // change the button text to Sure?
+            endgame.innerHTML = `Sure?`
+            // change the button text back to End game after 2 seconds
+            let m = setTimeout(function(){
+                endgame.innerHTML = `End game`
+            },2000)
+        }else{
+            game.modding.commands.stop()
+        }
     }
     endgame = buttonStyle(endgame)
 
@@ -209,12 +366,20 @@ function createTopButtons(){
     kickplayer.innerHTML = `Kick`
     kickplayer.onclick = function(){
         createKickUI()
-        console.log(`kick`)
     }
     kickplayer = buttonStyle(kickplayer)
 
+    let setgems = document.createElement(`div`)
+    setgems.id = `modcustombuttonsetgems`
+    setgems.innerHTML = `Set gems`
+    setgems.onclick = function(){
+        createSetGemsUI()
+    }
+    setgems = buttonStyle(setgems)
+
     div.appendChild(endgame)
     div.appendChild(kickplayer)
+    div.appendChild(setgems)
 
     document.getElementById(`modcustomthing`).appendChild(div)
 }
